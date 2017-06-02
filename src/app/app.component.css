@@ -1,0 +1,52 @@
+/* FIVE COLUMN LAYOUT  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -*/
+*{box-sizing: border-box;}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+  min-height: 1px;
+  float: left;
+  border-right:1px solid black;
+  border-bottom:1px solid black;
+}
+
+
+.col {
+  background: white;
+  min-height: 40px;
+  line-height: 0;
+  border-left:1px solid black;
+  border-top:1px solid black;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding: 2%;
+}
+
+.col:first-child {
+  margin-left: 0px;
+}
+
+.col:last-child {
+  margin-right: 0px;
+}
+
+.col.five {width: 100%;}
+.col.four {width: 50%;}
+.col.three {width: 33.33%;}
+.col.two {width: 25%;}
+.col.one {width: 20%;}
+
+
+@media(max-width: 786px) {
+  .col {
+    width: 100% !important;
+    margin: 5px 0px 5px 0px;
+  }
+}
