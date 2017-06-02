@@ -1,0 +1,25 @@
+<div id="selector" class="col one">
+  <label (click)=changeSelection(false)>Less
+    <input type="radio" name="selector" value="less" checked>
+  </label>
+
+  <label (click)=changeSelection(true)>More
+    <input type="radio" name="selector" value="more">
+  </label>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <ul>
+      <li *ngFor="let field of fields">
+        <input type="checkbox" name="vehicle" value="{{field}}">{{field}}<br>
+      </li>
+    </ul>
+    <button type="button" name="button">apply</button>
+  </div>
+</div>
+
+
+<!-- we bind SelectorComponent.more to GridComponent.selection -->
+<app-grid [selection]="more" [length]="gridLength" [names]="fields"></app-grid>

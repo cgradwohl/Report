@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ReportService } from '../../services/report.service';
 
 @Component({
-  selector: 'app-dropdown',
-  templateUrl: './dropdown.component.html',
-  styleUrls: ['../../app.component.css', './dropdown.component.css']
+  selector: 'selectors',
+  templateUrl: './selectors.component.html',
+  styleUrls: ['../../app.component.css', './selectors.component.css']
 })
-export class DropdownComponent implements OnInit {
-
+export class SelectorsComponent implements OnInit {
+  more: Boolean;
   dataStore: any;
   fields: any;
   gridLength: any;
@@ -16,7 +16,10 @@ export class DropdownComponent implements OnInit {
     private reportService: ReportService
   ) { }
 
+  // initialize the app with LESS selected
   ngOnInit() {
+    this.more = false;
+
     // makes ONE network request, returns an array of JSON
     // as long as we get an array of JSON we can use this grid
     let data = this.reportService.getData();
@@ -26,6 +29,10 @@ export class DropdownComponent implements OnInit {
     this.gridLength = this.dataStore.length;
   }
 
-
+  // gets called on radio button click event
+  changeSelection(bool) {
+    this.more = bool;
+    console.log('HEYYYYY', this.more);
+  }
 
 }

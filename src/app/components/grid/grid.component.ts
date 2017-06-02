@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ReportService } from '../../services/report.service';
-import { SelectorComponent } from '../selector/selector.component';
+import { SelectorsComponent } from '../selectors/selectors.component';
 
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['../../app.component.css', './grid.component.css'],
-  inputs: ['selection']
+  inputs: ['selection', 'length', 'names']
 })
 export class GridComponent implements OnInit {
 
