@@ -8,16 +8,22 @@ import { ReportService } from '../../services/report.service';
 })
 export class DropdownComponent implements OnInit {
 
+  dataStore: any;
   fields: any;
+  gridLength: any;
 
   constructor(
     private reportService: ReportService
   ) { }
 
   ngOnInit() {
-    let fields = this.reportService.getFields();
-    this.fields = fields;
-    console.log(fields);
+    // makes ONE network request, returns an array of JSON
+    // as long as we get an array of JSON we can use this grid
+    let data = this.reportService.getData();
+    this.dataStore = data;
+
+    this.fields = Object.keys(this.dataStore[0]);
+    this.gridLength = this.dataStore.length;
   }
 
 
