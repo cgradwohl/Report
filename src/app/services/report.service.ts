@@ -12,7 +12,7 @@ export class ReportService {
     const obj = [
       {
         "name": "Italy",
-        "plan": "33",
+        "plan": "33 Italy",
         "forecast": "44",
         "best case": [
           "33",
@@ -27,7 +27,7 @@ export class ReportService {
       },
       {
         "name": "Belgium",
-        "plan": "33",
+        "plan": "33 Belgium",
         "forecast": "44",
         "best case": [
           "33",
@@ -42,7 +42,7 @@ export class ReportService {
       },
       {
         "name": "China",
-        "plan": "33",
+        "plan": "33 China",
         "forecast": "44",
         "best case": [
           "33",
@@ -57,7 +57,7 @@ export class ReportService {
       },
       {
         "name": "Japan",
-        "plan": "33",
+        "plan": "33 Japan",
         "forecast": "44",
         "best case": [
           "33",
@@ -72,7 +72,7 @@ export class ReportService {
       },
       {
         "name": "USA",
-        "plan": "33",
+        "plan": "33 USA",
         "forecast": "44",
         "best case": [
           "33",

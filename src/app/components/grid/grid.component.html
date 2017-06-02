@@ -1,7 +1,12 @@
+<!-- Report Header -->
 <div class="row">
-  <!-- here we get the data from the selector and use is as the selection attribute -->
-  <div *ngIf="selection" class="col two">{{selection}}</div>
-  <div class="col two">NAME</div>
-  <div class="col two">NAME</div>
-  <div class="col two">NAME</div>
+  <div *ngFor="let h of header" class="col {{col}}">{{h}}</div>
+</div>
+
+
+<!-- Report Body -->
+<div class="row" *ngFor="let d of data">
+  <div class="col {{col}}">{{d.name}}</div>
+  <div class="col {{col}}">{{d.plan}}</div>
+  <div class="col {{col}}">{{d.forecast}}</div>
 </div>
